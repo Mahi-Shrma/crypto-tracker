@@ -17,6 +17,8 @@ export default function SelectDays({days,handleDaysChange,noPTag}) {
           onChange={handleDaysChange}
           sx={{
             height: "2.5rem",
+            width: { xs: "4rem", sm: "6rem", md: "8rem" },  // Responsive width
+            fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" }, // Responsive font size
             color: "var(--white)",
             "& .MuiOutlinedInput-notchedOutline": {
               borderColor: "var(--white)",
@@ -27,6 +29,15 @@ export default function SelectDays({days,handleDaysChange,noPTag}) {
             "&:hover": {
               "&& fieldset": {
                 borderColor: "#3a80e9",
+              },
+            },
+          }}
+          MenuProps={{
+            PaperProps: {
+              sx: {
+                backgroundColor: "#f1f1f1", // Dark theme
+                maxHeight: { xs: "150px", sm: "200px", md: "300px" },
+                maxWidth: { xs: "8rem", sm: "unset" }, // Reduce dropdown height for small screens
               },
             },
           }}

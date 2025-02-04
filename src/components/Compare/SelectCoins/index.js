@@ -22,11 +22,14 @@ async function getData(){
     <div className='coins-flex'>
         <p>Crypto 1</p>
        <Select
+          className="select-coin"
           value={crypto1 || ""}
           label="Crypto 1"
           onChange={(event)=>handleCryptoChange(event,false)}
           sx={{
             height: "2.5rem",
+            width: { xs: "4rem", sm: "6rem", md: "8rem" },  // Responsive width
+            fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" }, // Responsive font size
             color: "var(--white)",
             "& .MuiOutlinedInput-notchedOutline": {
               borderColor: "var(--white)",
@@ -40,6 +43,15 @@ async function getData(){
               },
             },
           }}
+          MenuProps={{
+            PaperProps: {
+              sx: {
+                backgroundColor: "#f1f1f1", // Dark theme
+                maxHeight: { xs: "150px", sm: "200px", md: "300px" },
+                maxWidth: { xs: "8rem", sm: "unset" }, // Reduce dropdown height for small screens
+              },
+            },
+          }}
         >
             {allCoins
             .filter((item)=>item.id !== crypto2)
@@ -50,11 +62,14 @@ async function getData(){
         </Select>
         <p>Crypto 2</p>
        <Select
+          className="select-coin"
           value={crypto2 || ""}
           label="Crypto 2"
           onChange={(event)=>handleCryptoChange(event,true)}
           sx={{
             height: "2.5rem",
+            width: { xs: "4rem", sm: "6rem", md: "8rem" },  // Responsive width
+            fontSize: { xs: "0.6rem", sm: "0.8rem", md: "1rem" }, // Responsive font size
             color: "var(--white)",
             "& .MuiOutlinedInput-notchedOutline": {
               borderColor: "var(--white)",
@@ -65,6 +80,15 @@ async function getData(){
             "&:hover": {
               "&& fieldset": {
                 borderColor: "#3a80e9",
+              },
+            },
+          }}
+          MenuProps={{
+            PaperProps: {
+              sx: {
+                backgroundColor: "#f1f1f1", // Dark theme
+                maxHeight: { xs: "150px", sm: "200px", md: "300px" },
+                maxWidth: { xs: "8rem", sm: "unset" }, // Reduce dropdown height for small screens
               },
             },
           }}

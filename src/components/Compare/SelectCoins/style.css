@@ -1,7 +1,32 @@
-.coins-flex{
+.coins-flex {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap; /* Allow items to wrap */
     gap: 1.50rem;
     margin: 0rem 1.5rem;
+}
+.select-coin {
+    width: 8rem;
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .coins-flex {
+      justify-content: space-between;
+      gap: 0.25rem;
+      margin: 1.5rem 0.5rem;
+      font-size: 0.6rem;
+    }
+  
+    /* .coins-flex p {
+      display: none;
+    } */
+  
+    .select-coin {
+      width: 3rem;  /* Increased a bit to maintain usability */
+      font-size: 0.6rem;
+      margin: 0;
+      padding: 0;
+    }
 }
