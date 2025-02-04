@@ -140,9 +140,9 @@ async function handleDaysChange(e) {
       const prices1 = await getCoinPrices(crypto1, days, priceType);
       const prices2 = await getCoinPrices(event.target.value, days, priceType);
       settingChartData(setChartData, prices1, prices2);
-      // if (prices1.length > 0 && prices2.length > 0) {
-      //   setIsLoading(false);
-      // }
+      if (prices1.length > 0 && prices2.length > 0) {
+        setIsLoading(false);
+      }
     } else {
       setCrypto1(event.target.value);
       const data = await getCoinData(event.target.value);
@@ -150,7 +150,7 @@ async function handleDaysChange(e) {
       const prices1 = await getCoinPrices(event.target.value, days, priceType);
       const prices2 = await getCoinPrices(crypto2, days, priceType);
       settingChartData(setChartData, prices1, prices2);
-      // setIsLoading(false);
+      setIsLoading(false);
     }
     setIsLoading(false);
   };
