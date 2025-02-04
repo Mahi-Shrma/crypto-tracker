@@ -12,7 +12,7 @@ export default function ToggleOptions({priceType,handleToggleChange}) {
       exclusive
       onChange={handleToggleChange}
       sx={{
-        "&.Mui-selected": {
+        "& .Mui-selected": {
           color: "var(--blue) !important",
         },
         borderColor: "var(--blue)",
