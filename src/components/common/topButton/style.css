@@ -1,0 +1,11 @@
+.top-to-btn{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+  border-radius: 50%;
+  color: var(--blue);
+  bottom: 1.5rem;
+  right: 1.5rem;
+}

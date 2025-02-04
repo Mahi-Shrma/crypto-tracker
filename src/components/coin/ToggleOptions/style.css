@@ -1,0 +1,16 @@
+.toggle-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+  }
+  .css-gn0oko-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
+    color: var(--blue) !important;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .toggle-btn {
+      font-size: 0.7rem !important;
+      padding: 0.5rem !important;
+    }
+  }
